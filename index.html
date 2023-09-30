@@ -1,0 +1,817 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Import Google Icon Font and other icons-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="/css/materialize.min.css"  media="screen,projection"/>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Borel&family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+        
+        ::selection{
+          background-color: #c89703;
+          color: white;
+        }
+
+
+        nav {
+            position: fixed;
+            z-index: 4;
+        }
+
+        nav .brand-logo {
+            font-family: 'Borel';
+            padding: 12px 50px;
+        }
+        nav .right.hide-on-med-and-down{
+            font-family: 'Titillium Web';
+            padding-right: 30px;
+        }
+        .parallax-container {
+            width: 100%;
+            height: 600px;
+        }
+        .parallax::after {
+            content:"";
+            width:100%;
+            height: 100%;
+            margin-top: 30px;
+            position: absolute;
+            background: url("/images/pinal\ prllx_20230930223024.png") center;
+            background-size: cover;
+        }
+
+        .sidenav{
+            font-family: 'Titillium Web';
+            margin-top: 0;
+            color: #fff;
+            width: 250px;
+            padding-left: 20px;
+            height: 100vh;
+            background-image: linear-gradient(30deg ,#212121, #ffc107);
+            border-top-right-radius: 80px;
+        }
+
+        aside a {
+        font-size: 12pt;
+        color: #fff;
+        display: block;
+        padding: 12px;
+        padding-left: 30px;
+        text-decoration: none;
+        -webkit-tap-highlight-color:transparent;
+      }
+
+        .sidenav a:hover {
+        color: black;
+        background: #fff;
+        outline: none;
+        position: relative;
+        background-color: #fff;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+      }
+
+        .sidenav a i {
+        margin-right: 5px;
+      }
+
+        .sidenav a:hover::after {
+        content: "";
+        position: absolute;
+        background-color: transparent;
+        bottom: 100%;
+        right: 0;
+        height: 35px;
+        width: 35px;
+        border-bottom-right-radius: 18px;
+        box-shadow: 0 20px 0 0 #fff;
+      }
+
+      aside{
+        margin-left: 20px;
+        font-size: 17pt;
+      }
+        .sidenav a:hover::before {
+        content: "";
+        position: absolute;
+        background-color: transparent;
+        top: 38px;
+        right: 0;
+        height: 35px;
+        width: 35px;
+        border-top-right-radius: 18px;
+        box-shadow: 0 -20px 0 0 #fff;
+      }
+
+        .sidenav p {
+        margin: 0;
+        padding: 40px 0;
+      }
+
+      .user-view{
+        padding: 0 0;
+        margin-right: 0;
+      }
+        .sidenav {
+        font-family: 'Titillium Web';
+        /* width: 100%; */
+        height: 100vh;
+        margin: 0;
+      }
+
+      .social {
+        height: 0;  
+      }
+
+      .social i:before {
+        width: 14px;
+        height: 14px;
+        font-size: 14px;
+        position: fixed;
+        color: #fff;
+        background: #0077B5;
+        padding: 10px;
+        border-radius: 50%;
+        top:5px;
+        right:5px;
+      }
+
+      .progress{
+        background-color: #212121;
+      }
+
+      .progress .indeteminate{
+        background-color: #ffc107;
+      }
+        .wan.row {
+            font-family: 'Titillium Web';
+            font-size: 15pt;
+            padding: 20px 20px;
+            line-height: 25px;
+        }
+        .wan.row {
+            margin: 40px auto;
+        }
+        .intro {
+          font-family: 'titillium Web';
+          /* border: 2px solid black; */
+          padding: 30px;
+          padding-right: 50px;
+          padding-left: 50px;
+        }
+        .newu.pic-1.center.col.s12.m6.l6{
+          margin: 0 0;
+          padding: 0 0;
+        }
+        
+        .tu.row {
+            font-family: 'Titillium Web';
+            font-size: 15pt;
+            padding: 20px;
+            /* background: #ddd; */
+            /* border: 0.5px solid #1f1e1e; */
+            line-height: 25px;
+        }
+        .tu.row {
+            margin: 40px auto;
+        }
+        .tri.row.center.col.s12.m12.l12{
+            padding: 20px;
+            font-family: 'Titillium Web';
+        }
+        /* .page-footer.amber.black-text{
+            margin: 0;
+        } */
+        .page-footer.grey.darken-4.amber-text h1{
+            padding-top: 0;
+            font-family: 'Borel';
+        }
+        .page-footer.grey.darken-4.amber-text p {
+            padding-top: 0;
+        }
+        .por.row {
+            font-family: 'Titillium Web';
+            font-size: 15pt;
+            /* padding: 20px; */
+            /* background: #ddd; */
+            /* border: 0.5px solid #1f1e1e; */
+            line-height: 25px;
+        }
+        .justify.col.s12.m12.l12 {
+            padding-left: 270px;
+        }
+        .gwid.col.s12.m12.l12{
+          font-family: 'titillium Web';
+          font-size: 15pt;
+          border: 2px solid black;
+          padding: 30px;
+          padding-right: 50px;
+          padding-left: 50px;
+          border-radius: 50px;
+          box-shadow: 5px 5px #ffc107;/
+        }
+        .walo.row.col.s12.m12.l12{
+          font-family: 'titillium Web';
+        }
+        .card.amber.lighten-1 .card-content{
+          font-size: 13pt;
+        }
+        .tin.row.col.s12.m12.l12 {
+          font-family: 'titillium Web';
+          font-size: 15pt;
+          border: 2px solid black;
+          padding: 30px;
+          padding-right: 30px;
+          padding-left: 30px;
+          border-radius: 50px;
+          box-shadow: 5px 5px #ffc107;
+        }
+        
+        .siyam.center.row.col.s12.m12.l12 , .tin.center.row.col.s12.m12.l12  {
+          font-family: 'Titillium Web';
+        }
+        .siyam.row.col.s12.m12.l12{
+          padding-bottom: 50px;
+        }
+        .ilibin.col.s12.m12.l12.center{
+          font-family: 'Titillium Web';
+        }
+        .carousel-fixed-item.center{
+          font-family: 'Titillium Web';
+        }
+        .page-footer.grey.darken-4.amber-text{
+          padding: 20px;
+          padding-bottom: 100px;
+        }
+        .btn-floating.btn-large.waves-effect.waves-darken.pulse.amber{
+          margin: 10px;
+        }
+        footer .amber-text.center{
+          font-family: 'Titillium Web';
+        }
+        .page-footer.grey.darken-4.amber-text{
+          padding-top: 50px;
+        }
+        .user-view{
+          margin: 0 0;
+          padding: 0 0;
+        }
+
+        .olaw.center.row.col.s12.m12.l12{
+          margin: 100px 20px;
+          font-family: 'titillium Web';
+          font-size: 15pt;
+          border: 2px solid black;
+          padding: 30px;
+          padding-bottom: 30px;
+          padding-right: 50px;
+          padding-left: 50px;
+          border-radius: 50px;
+          box-shadow: 5px 5px #ffc107
+        }
+        .walo.center.row.col.s12.m12.l12{
+          margin: 0 0;
+        }
+
+        .col.s12.m2.l2.amber{
+        background-color: #26a69a;
+        width: 100px;
+        height: 100px;
+        margin: 20px auto;
+        }
+        .newu.pic-1.center.col.s12.m6.l6{
+          padding-top: 150px;
+        }
+        .card.amber.hover-reveal{
+          margin: 20px 10px;
+        }
+        /* .center.row.col.s12.m12.l12{
+          color: #ffc107 !important;
+          background-color:  #212121!important;
+          border-radius: 50px;
+          box-shadow: 5px 5px #ffc107
+        } */
+        .walo.center.row.col.s12.m12.l12{
+          color: #ffc107 !important;
+          background-color:  #212121!important;
+          border-radius: 50px;
+          box-shadow: 5px 5px #ffc107
+        }
+        .nit.center.row.col.s12.m12.l12{
+          color: #ffc107 !important;
+          background-color:  #212121!important;
+          border-radius: 50px;
+          box-shadow: 5px 5px #ffc107
+        }
+        
+        .card.amber.hover-reveal{
+          background-color: #212121;
+        }
+
+        .card-reveal{
+        color: #ffffff;
+        background-color: rgba(0,0,0,0.4) !important;
+        }
+        
+        div.card-reveal span.card-title{
+          color: #ffffff !important;
+        }
+        .tabs{
+          background-color: transparent;
+        }
+        td, th{
+          padding: 5px 5px !important;
+        }
+        table.highlight>tbody>tr:hover{
+          background-color: rgba(238,110,115,0.6);
+        }
+        input[type=search]:focus{
+          border-bottom: 1px solid #ee6e73 !important;
+          box-shadow: 0 1px 0 0 #ee6e73 !important;
+        }
+        .container.last{
+          margin-top: 170px;
+        }
+        .siyam.center.row.col.s12.m12.l12{
+          padding-bottom: 0;
+          color: #ffc107 !important;
+          background-color:  #212121!important;
+          border-radius: 50px;
+          box-shadow: 5px 5px #ffc107
+        }
+        .intru.col.s12.m12.l12{
+          margin: 0 20px;
+          font-family: 'titillium Web';
+          font-size: 15pt;
+          color: #212121 !important;
+          background-color:  #ffc107!important;
+          border: 2px solid black;
+          padding: 10px;
+          padding-bottom: 10px;
+          padding-right: 13px;
+          padding-left: 13px;
+          border-radius: 50px;
+          box-shadow: 5px 5px #212121
+        }
+        .walo.row.col.s12.m12.l12{
+          margin: 0 0 75px;
+          /* margin-bottom: 75px; */
+        }
+        .artist{
+            padding-left: 65px;
+        }
+        .miyas.row.col.s12.m12.l12{
+          margin: 0 0 75px;;
+        }
+        .nero{
+            height: 100px;
+            width: 100px;
+            margin: 50px 0 120px 0;
+        }
+        .uno.container{
+          font-family: Borel;
+          background-color: #212121;
+          color: #ffc107;
+        }
+
+
+
+
+
+        /* HOVERS */
+        .btn.black.amber-text.waves-effect.waves-yellow:hover{
+          color: #212121 !important;
+          background-color: #ffc107 !important;
+        }
+        .btn.amber.black-text:hover{
+          color: #ffc107 !important;
+          background-color: #212121 !important;
+        }
+        .container.hide-on-med-and-up{
+          padding: 20px 0;
+        }
+        .card-content:hover{
+          background:#212121;
+          color: #ffc107 !important;
+        }
+        .tin.row.col.s12.m12.l12:hover{
+          color:  #212121  !important;
+          background-color: #ffc107 !important;
+          box-shadow: 5px 5px #212121;
+          /* border: 2px solid #ffc107; */
+        }
+        .nit.center.row.col.s12.m12.l12:hover{
+          color: #212121 !important;
+          background-color:  #ffc107!important;
+          box-shadow: 5px 5px #212121;
+        }
+        .olaw.center.row.col.s12.m12.l12:hover{
+          color: #212121 !important;
+          background-color:  #ffc107!important;
+          box-shadow: 5px 5px #212121;
+        }
+        .siyam.center.row.col.s12.m12.l12:hover{
+          color: #212121 !important;
+          background-color:  #ffc107!important;
+          box-shadow: 5px 5px #212121;
+        }
+        .walo.center.row.col.s12.m12.l12:hover{
+          color: #212121 !important;
+          background-color:  #ffc107!important;
+          box-shadow: 5px 5px #212121;
+        }
+        .gwid.col.s12.m12.l12:hover{
+          color: #212121 !important;
+          background-color:  #ffc107!important;
+          box-shadow: 5px 5px #212121;
+        }
+        .intru.col.s12.m12.l12:hover{
+          color: #212121 !important;
+          background-color: snow!important;
+          box-shadow: 5px 5px #ffc107;
+        }
+        
+        
+
+        /* RESPONSIVE */
+        @media screen and (max-width: 1280px){
+          /* body{
+            font-size: 20pt;
+          } */
+          .sidenav{
+            font-size: 20pt;
+           
+            margin-bottom: 0;
+            height: 1640px;
+          }
+          .wan.row{
+            font-size: 14pt;
+            line-height: 25px;
+          }
+          .artist{
+            padding-left: 50px;
+          }
+          .intro{
+            padding: 20px 0;
+          }
+          a .btn-small.amber.black-text{
+            height: 50px !important;
+          }
+          .tin.row.col.s12.m6.l6{
+            padding-left: 0;
+            padding-right: 0;
+          }
+          .parallax-container{
+            height: 500px !important;
+          }
+          /* .carousel.carousel-slider{
+            height: 300px !important;
+          } */
+          .newu.pic-1.center.col.s12.m6.l6{
+            height: 100px;
+            width: 100px;
+            margin: 0 0 500px 30px;
+          }
+          footer{
+          padding-bottom: 20px;
+          }
+        }
+
+
+        
+    </style>
+
+    <title>AniNeru</title>
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="nav-wraper amber">
+        <div class="nabi">
+            <a href="#" class="brand-logo black-text ">AniNeru</a>
+            <a href="#" class="sidenav-trigger" data-target="mobile-links">
+                <i class="material-icons black-text">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#" class="ho black-text waves-effect waves-yellow">Home</a></li>
+                <li><a href="#about" class="ab black-text waves-effect waves-yellow">About</a></li>
+                <li><a href="#commission" class="co black-text waves-effect waves-yellow">Commission</a></li>
+                <li><a href="#process" class="te black-text waves-effect waves-yellow">Terms & Process</a></li>
+                <li><a href="#updates" class="te black-text waves-effect waves-yellow">Updates</a></li>
+                <li><a href="mailto:contactanineru@gmail.com" class="btn black amber-text waves-effect waves-yellow">Contact Me!
+                    <i class="material-icons left">email</i>
+                </a></li>
+            </ul>
+        </div>
+
+        
+    </nav>
+
+    <ul class="sidenav user-view" id="mobile-links">
+        
+         <!-- <div class="user-view"> -->
+          <aside>
+            <p> Menu </p>
+            <a href="#">
+              <i class="fa fa-home" aria-hidden="true"></i>
+              Home
+            </a>
+            <a href="#about">
+              <i class="fa fa-user-o" aria-hidden="true"></i>
+              About
+            </a>
+            <a href="#commission">
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+              Commission
+            </a>
+            <a href="#process">
+              <i class="fa fa-question-circle" aria-hidden="true"></i>
+              Terms & Process
+            </a>
+            <a href="#updates">
+              <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+              Updates
+            </a>
+            <p style="padding-top: 0; padding-bottom: 0; margin-left: 50px ;">-----</p>
+            <a href="mailto:contactanineru@gmail.com" color=""><i class="fa fa-envelope" aria-hidden="true"></i>AniNeru Mail Here~</a>
+          </aside>
+     </ul>
+
+     <!-- Parallax -->
+     <div class="parallax-container">
+        <div class="parallax">
+            <img src="./images/Parallax-bg.png" alt="" class="responsive-img">
+        </div>
+    </div>
+
+    <div class="container">
+      <div class="nabey-2">
+              <h1 class="welcome center">Welcome to AniNeru's Website! </h1>
+      </div>
+  </div>
+    <div class="progress">
+      <div class="indeterminate"></div>
+    </div>
+
+    <div class="container" id="about">
+        <div class="wan row">
+            <div class="center col s12 m6 l6">
+                <h2 class="artist section scrollspy center" id="about">Artist Info</h2>
+                <div class="intru col s12 m12 l12">
+                  <p align="justify" class="intro">Hello I'm AniNeru Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus deserunt ea cupiditate. Beatae sapiente quo odio dolorem illum, quae alias iste dignissimos blanditiis voluptas dolorum excepturi accusantium, doloribus illo eligendi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam repudiandae consequuntur exercitationem iste nobis et at repellat? Aut, nesciunt. Delectus, ducimus id reiciendis quaerat perferendis quis veniam facere minima accusantium! lore</p>
+                </div>
+                    
+            </div>
+            <div class="newu pic-1 center col s12 m6 l6">
+                <img src="./images/Untitled491_20230924145912.png" alt="" class="nero" style="height: 300px; width: 300px; padding: 0 0 30px 0;">
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="my_artworks">
+        <div class="tri row col s12 m12 l12 center">
+            <h2>My Artworks!</h2>
+            <p class="center"><< Swipe left and right >></p>
+        </div>
+    </div>
+
+    <div class="carousel carousel-slider">
+        <div class="carousel-fixed-item center hide-on-small-only"><a href="" class="btn-small amber black-text">Portfolio Here!</a></div>
+            <div class="caru row col l2">
+                <a class="carousel-item" href=".#one!"><img src="./images/Untitled489_20230923145032.png"></a>
+                <a class="carousel-item" href=".#two!"><img src="./images/Untitled489_20230923145032.png"></a>
+                <a class="carousel-item" href=".#three!"><img src="./images/Untitled489_20230923145032.png"></a>
+            </div>     
+      </div>
+
+    <div class="container hide-on-med-and-up">
+      <div class="row col s12 center">
+        <a href="mailto:contactanineru@gmail.com" class="btn-small black amber-text waves-effect waves-yellow ">Contact Me!
+          <i class="material-icons left">email</i></a>
+      </div>
+    </div>
+
+    <div class="container">
+        <div class="por row">
+            <div class="left col s12 m12 l12">
+                <h2 id="commission" class="section scrollspy">Commissions</h2>
+                    <p align="justify">ARTSTYLES I DRAW</p>
+            </div>
+            <div class="payb row">
+              <div class="row col s12 m6 l4">
+                <div class="card amber hover-reveal">
+                  <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="./images/c7a22ff9-c19c-460a-89e8-ae59eeda284d.jpg">
+                  </div>
+                  <div class="card-content activator">
+                    <span class="card-title activator center"><h4>My Main <br>Artstyle</h4></span>
+                    <p class="center" style="font-size: 12pt;">Click for info</p>
+                  </div>
+                  <div class="card-reveal">
+                    <span class="card-title ">Card Title<i class="material-icons right">close</i></span><p>Here is some more information about this product that is only revealed once hover it.</p><p>Lorem ipsum dolor sit amet, et ius nostro pertinacia, nihil congue temporibus vel cu. Senserit petentium cum te. Ullum inermis quaerendum ex ius, sed nisl insolens te. Eu dicit laoreet sea.
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium reprehenderit voluptates quo, optio alias beatae quae autem totam et omnis sint ab, obcaecati ducimus amet natus id? Rem, molestias quam. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat veritatis tempora quibusdam amet distinctio velit sit tenetur? Aliquid quibusdam fugit fuga iusto dolorem ab quisquam, magnam culpa consectetur cum accusantium?
+                    </p>
+                  </div>
+                </div>
+               </div>
+
+               <div class="row col s12 m6 l4">
+                  <div class="card amber hover-reveal">
+                    <div class="card-image waves-effect waves-block waves-light">
+                      <img class="activator" src="./images/c7a22ff9-c19c-460a-89e8-ae59eeda284d.jpg">
+                    </div>
+                    <div class="card-content activator">
+                      <span class="card-title activator center"><h4>Chibi/ <br>Emotes</h4></span>
+                    <p class="center" style="font-size: 12pt;">Click for info</p>
+                  </div>
+                    <div class="card-reveal">
+                      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span><p>Here is some more information about this product that is only revealed once hover it.</p><p>Lorem ipsum dolor sit amet, et ius nostro pertinacia, nihil congue temporibus vel cu. Senserit petentium cum te. Ullum inermis quaerendum ex ius, sed nisl insolens te. Eu dicit laoreet sea.
+                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium reprehenderit voluptates quo, optio alias beatae quae autem totam et omnis sint ab, obcaecati ducimus amet natus id? Rem, molestias quam. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat veritatis tempora quibusdam amet distinctio velit sit tenetur? Aliquid quibusdam fugit fuga iusto dolorem ab quisquam, magnam culpa consectetur cum accusantium?
+                      </p>
+                    </div>
+                  </div>
+                 </div>
+
+               <div class="row col s12 m6 l4">
+                    <div class="card amber hover-reveal">
+                      <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="./images/c7a22ff9-c19c-460a-89e8-ae59eeda284d.jpg">
+                      </div>
+                      <div class="card-content activator">
+                        <span class="card-title activator center"><h4>Digital <br>Watercolor</h4></span>
+                    <p class="center" style="font-size: 12pt;">Click for info</p>
+                  </div>
+                      <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span><p>Here is some more information about this product that is only revealed once hover it.</p><p>Lorem ipsum dolor sit amet, et ius nostro pertinacia, nihil congue temporibus vel cu. Senserit petentium cum te. Ullum inermis quaerendum ex ius, sed nisl insolens te. Eu dicit laoreet sea.
+                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium reprehenderit voluptates quo, optio alias beatae quae autem totam et omnis sint ab, obcaecati ducimus amet natus id? Rem, molestias quam. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat veritatis tempora quibusdam amet distinctio velit sit tenetur? Aliquid quibusdam fugit fuga iusto dolorem ab quisquam, magnam culpa consectetur cum accusantium?
+                        </p>
+                      </div>
+                    </div>
+                   </div>
+
+            <div class="pito row">
+                <div class="col s12 m6 l4 offset-l2 left">
+                    <div class="card amber hover-reveal">
+                      <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="./images/c7a22ff9-c19c-460a-89e8-ae59eeda284d.jpg">
+                      </div>
+                      <div class="card-content activator">
+                        <span class="card-title activator center"><h4>Graphite <br>Stylization</h4></span>
+                    <p class="center" style="font-size: 12pt;">Click for info</p>
+                  </div>
+                      <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span><p>Here is some more information about this product that is only revealed once hover it.</p><p>Lorem ipsum dolor sit amet, et ius nostro pertinacia, nihil congue temporibus vel cu. Senserit petentium cum te. Ullum inermis quaerendum ex ius, sed nisl insolens te. Eu dicit laoreet sea.
+                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium reprehenderit voluptates quo, optio alias beatae quae autem totam et omnis sint ab, obcaecati ducimus amet natus id? Rem, molestias quam. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat veritatis tempora quibusdam amet distinctio velit sit tenetur? Aliquid quibusdam fugit fuga iusto dolorem ab quisquam, magnam culpa consectetur cum accusantium?
+                        </p>
+                      </div>
+                    </div>
+                   </div>
+
+                  <div class="col s12 m6 l4 offset-m3 left">
+                    <div class="card amber hover-reveal">
+                      <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="./images/c7a22ff9-c19c-460a-89e8-ae59eeda284d.jpg">
+                      </div>
+                      <div class="card-content activator">
+                        <span class="card-title activator center"><h4>Cute <br>Artstyle</h4></span>
+                    <p class="center" style="font-size: 12pt;">Click for info</p>
+                  </div>
+                      <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span><p>Here is some more information about this product that is only revealed once hover it.</p><p>Lorem ipsum dolor sit amet, et ius nostro pertinacia, nihil congue temporibus vel cu. Senserit petentium cum te. Ullum inermis quaerendum ex ius, sed nisl insolens te. Eu dicit laoreet sea.
+                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium reprehenderit voluptates quo, optio alias beatae quae autem totam et omnis sint ab, obcaecati ducimus amet natus id? Rem, molestias quam. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat veritatis tempora quibusdam amet distinctio velit sit tenetur? Aliquid quibusdam fugit fuga iusto dolorem ab quisquam, magnam culpa consectetur cum accusantium?
+                        </p>
+                      </div>
+                    </div>
+                   </div>
+            </div> 
+    </div> 
+    
+    <div class="container last">
+      <div class="walo center row col s12 m12 l12">
+          <h3 class="section scrollspy" id="process">TERMS & CONDITIONS</h3>
+      </div>
+      <div class="walo row col s12 m12 l12">
+        <p class="gwid col s12 m12 l12" align="justify">
+          • communication is through facebook messenger or Instagram DMs
+          <br>• i will send you the sketch first before i finish the artwork
+          <br>• revisions are alloted during the sketching phase, up to 3 free minor revisions only
+          <br>• high resolution will be sent through email or google drive
+          <br>• TAT (turnaround time) is 5-10 working days
+        </p>
+      </div>
+
+      <div class="siyam center row col s12 m12 l12">
+        <h3>PROCESS OF TRANSACTION</h3>
+        <p class="center">WHAT TO DO?</p>
+      </div>
+      <div class="miyas row col s12 m12 l12">
+        <p class="gwid col s12 m12 l12" align="justify">
+        • communication is through facebook messenger or Instagram DMs
+        <br>• i will send you the sketch first before i finish the artwork
+        <br>• revisions are alloted during the sketching phase, up to 3 free minor revisions only
+        <br>• high resolution will be sent through email or google drive
+        <br>• TAT (turnaround time) is 5-10 working days
+      </p>
+      </div>
+
+      <div class="nit center row col s12 m12 l12">
+        <h3 class="dus">DO's and DONT's</h3>
+      </div>
+      <div class="tin row col s12 m12 l12">
+        <p class="gwid-1 col s12 m6 l6" align="justify">
+        • communication is through facebook messenger or Instagram DMs
+        <br>• i will send you the sketch first before i finish the artwork
+        <br>• revisions are alloted during the sketching phase, up to 3 free minor revisions only
+        <br>• high resolution will be sent through email or google drive
+        <br>• TAT (turnaround time) is 5-10 working days
+      </p>
+      <p class="gwid-1 col s12 m6 l6" align="justify">
+        • communication is through facebook messenger or Instagram DMs
+        <br>• i will send you the sketch first before i finish the artwork
+        <br>• revisions are alloted during the sketching phase, up to 3 free minor revisions only
+        <br>• high resolution will be sent through email or google drive
+        <br>• TAT (turnaround time) is 5-10 working days
+      </p>
+      </div>
+
+      <div class="container">
+        <div class="olaw center row col s12 m12 l12">
+          <h4 class="section scrollspy" id="updates">COMMISSION UPDATES</h4>
+          <p align="center" style="font-size: 13pt;">Check my current commission <br>status by clicking the button below !</p>
+          <div class="container">
+            <div class="row col s12 center">
+              <a href="https://1drv.ms/o/s!AjYuvMMu5WhthXrqOVKpE_XEyGhT?e=hlDMYK" class="btn black amber-text waves-effect waves-yellow ">Click Here!
+                <i class="material-icons right">info</i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </div>
+
+
+     <!-- Footer -->
+     <footer class="page-footer grey darken-4 amber-text">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h1 class="amber-text center">AniNeru</h1>
+              <p class="amber-text center">You can use rows and columns here to organize your footer content.</p>
+            </div>
+            <div class="col l4 offset-l2 s12 center">
+              <h4 class="amber-text center">Links</h4>
+              <ul>
+                <li>
+                  <a class="btn-floating btn-large waves-effect waves-darken pulse amber" href="./https://instagram.com/_anineru?igshid=NzZhOTFlYzFmZQ=="><i class="fa fa-instagram black-text" aria-hidden="true"></i></a>
+                  <a class="btn-floating btn-large waves-effect waves-darken pulse amber" href="./https://www.facebook.com/profile.php?id=100091417051963"><i class="fa fa-facebook-f black-text"></i></a>
+                  <a class="btn-floating btn-large waves-effect waves-darken pulse amber" href="./https://www.youtube. com/channel/UC4ODIPFkHWjTRx5Mkesu46w"><i class="fa fa-youtube-play black-text" aria-hidden="true"></i></a>
+                  <a class="btn-floating btn-large waves-effect waves-darken pulse amber" href="./https://l.facebook.com/l.php?u=https%3A%2F%2Ftwitter.com%2FAniNeru%3Ffbclid%3DIwAR0_Qu2bMnCqsay_BtrKFYo6Y8NKX7w1z1wrvHW-TiDotVpoV7QNpyq9CRE&h=AT3B6rHOM2stRkNDHmqmL9rr59w5bJWIhgaTYV5EltPeLJJGzTRe6YmYS9LOmGGqL4pP6YU1Pa0aZeC8a2CS4leJ0VZ7fWeEPI99BpxhF8OMHlnsC6_qLF0BcAplfeV_4RXiqd_c7Bv3nhD_OBkn">
+                    <i class="fa fa-twitter black-text" aria-hidden="true"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="footer-copyright grey darken-4 amber-text">
+          <div class="container">
+          © 2014 Copyright Text
+          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+          </div>
+        </div> -->
+      </footer>
+
+
+    <script src="/js/code.jquery.js"></script>
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.sidenav').sidenav();
+            $('.parallax').parallax();
+            $('.carousel').carousel({
+              fullWidth: true,
+              indicators: true,
+            });
+            $('.scrollspy').scrollSpy();
+
+            autoplay();
+            function autoplay(){
+              $('.carousel').carousel('next');
+              setTimeout(autoplay, 4000);
+            }
+          });
+
+    </script>
+</body>
+</html>
